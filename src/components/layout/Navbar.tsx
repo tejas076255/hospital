@@ -157,7 +157,7 @@ export function Navbar() {
 
       {/* Mobile Drawer Menu */}
       {mobileMenuOpen && (
-        <div className="xl:hidden bg-white border-b border-[#EAEAEA] px-6 py-4 space-y-2">
+        <div id="mobile-menu" className="fixed inset-x-0 top-16 bg-white border-t border-[#EAEAEA] z-50 px-6 py-4 space-y-2 max-h-screen overflow-y-auto">
           <div className="grid grid-cols-2 gap-2 pb-3 border-b border-[#EAEAEA]">
             {NAV_LINKS.map((link) => (
               <Link
