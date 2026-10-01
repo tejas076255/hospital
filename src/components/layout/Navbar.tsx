@@ -145,8 +145,10 @@ export function Navbar() {
           {/* Mobile Menu Hamburger */}
           <button
             onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
-            className="xl:hidden p-2 rounded-lg text-[#6B7280] hover:bg-zinc-100"
-            aria-label="Toggle Navigation Menu"
+            className="xl:hidden p-2 rounded-lg text-[#6B7280] hover:bg-zinc-100 focus-visible:ring-2 focus-visible:ring-[#111111]"
+            aria-label="Toggle navigation menu"
+            aria-expanded={mobileMenuOpen}
+            aria-controls="mobile-menu"
           >
             {mobileMenuOpen ? <X className="w-5 h-5" /> : <Menu className="w-5 h-5" />}
           </button>
