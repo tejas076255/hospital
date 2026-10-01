@@ -141,7 +141,7 @@ export function PortalLayout({ children }: PortalLayoutProps) {
 
       {/* Sidebar Navigation - Strictly White background with subtle gray border */}
       <aside
-        className={`fixed top-0 bottom-0 left-0 z-50 flex flex-col bg-white border-r border-[#EAEAEA] transition-all duration-200 md:static ${
+        className={`fixed top-0 bottom-0 left-0 z-50 flex flex-col bg-white border-r border-[#EAEAEA] overflow-y-auto transition-all duration-200 md:static ${
           collapsed ? 'w-20' : 'w-64'
         } ${mobileOpen ? 'translate-x-0' : '-translate-x-full md:translate-x-0'}`}
       >
