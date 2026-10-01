@@ -30,14 +30,14 @@ export function RoleSwitcher() {
   };
 
   return (
-    <div className="relative">
+    <div className="relative hidden md:block">
       <button
         onClick={() => setIsOpen(!isOpen)}
         className="flex items-center gap-2 px-3 py-1.5 rounded-lg text-xs font-semibold bg-zinc-100 hover:bg-zinc-200/80 text-zinc-900 border border-zinc-200 transition-all shadow-2xs"
         title="Switch user role demo"
       >
         <Icon className="w-3.5 h-3.5 text-zinc-900" />
-        <span className="hidden sm:inline text-zinc-500">Role:</span>
+        <span className="text-zinc-500">Role:</span>
         <span className="font-bold text-zinc-900">{currentRoleConfig.label.split(' ')[0]}</span>
         <ChevronDown className="w-3 h-3 text-zinc-500" />
       </button>

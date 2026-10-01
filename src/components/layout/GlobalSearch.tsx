@@ -121,15 +121,25 @@ export function GlobalSearch() {
 
   return (
     <>
+      {/* Mobile Icon Trigger */}
       <button
         onClick={() => setIsOpen(true)}
-        className="flex items-center gap-2 px-3 py-1.5 rounded-lg bg-zinc-100 text-zinc-500 text-xs border border-zinc-200 hover:border-zinc-300 hover:text-zinc-900 transition-all w-36 sm:w-56 justify-between group shadow-2xs"
+        className="sm:hidden p-2 rounded-lg bg-zinc-100 text-zinc-600 hover:text-zinc-900 border border-zinc-200 transition-colors"
+        aria-label="Search system"
+      >
+        <Search className="w-4 h-4" />
+      </button>
+
+      {/* Desktop / Tablet Bar Trigger */}
+      <button
+        onClick={() => setIsOpen(true)}
+        className="hidden sm:flex items-center gap-2 px-3 py-1.5 rounded-lg bg-zinc-100 text-zinc-500 text-xs border border-zinc-200 hover:border-zinc-300 hover:text-zinc-900 transition-all sm:w-44 md:w-52 lg:w-56 justify-between group shadow-2xs"
       >
         <span className="flex items-center gap-2">
           <Search className="w-3.5 h-3.5 text-zinc-400 group-hover:text-zinc-900 transition-colors" />
           <span className="truncate">Search system...</span>
         </span>
-        <kbd className="hidden sm:inline-flex items-center gap-0.5 rounded bg-white px-1.5 py-0.5 font-mono text-[10px] font-semibold text-zinc-600 shadow-2xs border border-zinc-200">
+        <kbd className="inline-flex items-center gap-0.5 rounded bg-white px-1.5 py-0.5 font-mono text-[10px] font-semibold text-zinc-600 shadow-2xs border border-zinc-200">
           ⌘K
         </kbd>
       </button>
